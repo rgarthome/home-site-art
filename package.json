@@ -1,0 +1,1 @@
+{"name":"art-home-netlify-organizat","version":"1.0.0","private":true,"scripts":{"start":"netlify dev","build":"echo Site static"}}

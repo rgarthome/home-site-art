@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Art Home | Magazin Afiliere</title>
+  <meta name="description" content="Art Home - magazin afiliere cu feed-uri 2Performant, paginare, categorii și chatbot.">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <header>
+  <div class="nav">
+    <a class="brand" href="index.html">
+      <img src="logo.jpg" alt="Art Home logo">
+      <span>Art Home</span>
+    </a>
+
+    <nav>
+      <a href="index.html#produse">Produse</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <img class="hero-logo" src="logo.jpg" alt="Art Home">
+
+        <div class="badge">Feed-uri 2Performant • Art Home</div>
+
+        <h1>Art Home</h1>
+
+        <p>Produse importate automat din feed-uri 2Performant, organizate pe categorii și încărcate treptat.</p>
+
+        <a class="btn btn-primary" href="#produse">Vezi produsele</a>
+
+        <div class="search-box">
+          <input id="productSearch" type="text" placeholder="Caută produse: sfeșnic, pahare, carte...">
+          <button onclick="applyFilters()">Caută</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="produse">
+      <div class="section-title">
+        <h2>Produse recomandate</h2>
+        <p>Alege categoria sau caută produsul dorit.</p>
+      </div>
+
+      <div class="feed-status" id="feedStatus">Se încarcă produsele...</div>
+
+      <div class="controls">
+        <select id="categorySelect">
+          <option value="Toate">Toate</option>
+        </select>
+      </div>
+
+      <div class="grid" id="productsGrid"></div>
+
+      <div class="load-more-wrap">
+        <button class="btn btn-primary" id="loadMoreButton" onclick="loadProducts(false)">
+          Încarcă mai multe produse
+        </button>
+      </div>
+
+      <div class="notice">
+        <h2>Transparență afiliere</h2>
+        <p>Unele linkuri pot fi linkuri de afiliere. Putem primi comision, fără cost suplimentar pentru tine.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <p>© 2026 Art Home – Amenajări Interioare</p>
+  </footer>
+
+  <button class="chat-toggle" onclick="toggleChat()">💬</button>
+
+<div class="chat-widget" id="chatWidget">
+  <div class="chat-header">
+    <div>
+      <strong>Asistent Art Home</strong><br>
+      <span>Te ajut să găsești produse</span>
+    </div>
+
+    <button class="chat-close" onclick="toggleChat()">×</button>
+  </div>
+
+  <div class="chat-messages" id="chatMessages">
+    <div class="message bot">
+      Bună! Cu ce te pot ajuta?
+    </div>
+  </div>
+
+  <form class="chat-form" onsubmit="sendMessage(event)">
+    <input id="chatInput" type="text" placeholder="Scrie aici...">
+    <button type="submit">Trimite</button>
+  </form>
+</div>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
