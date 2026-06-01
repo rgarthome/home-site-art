@@ -1,6 +1,6 @@
 
 const FEEDS = [
-  "https://feeds.2performant.com/feed/1fd79fcec.xml",
+  "https://api.2performant.com/feed/678ad97ca.xml",
   "https://feeds.2performant.com/feed/9e5f87c47.xml"
 ];
 
